@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="543.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.unisep.NovoPacienteController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Informe nos campos abaixo os dados do novo Paciente" />
+      <Label layoutX="23.0" layoutY="340.0" text="Dados antropometricos:" />
+      <Label layoutX="190.0" layoutY="415.0" text="Sexo:" />
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="493.0" prefHeight="25.0" prefWidth="228.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <JFXButton defaultButton="true" onAction="#salvar" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #154710;" text="Salvar" textFill="WHITE" />
+            <JFXButton onAction="#limparCampo" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #154710;" text="Limpar Tela" textFill="WHITE" />
+            <JFXButton cancelButton="true" onAction="#cancelar" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #154710;" text="Cancelar" textFill="WHITE" />
+         </children>
+      </HBox>
+      <JFXTextField fx:id="txtNome" focusColor="#40a84d" layoutX="14.0" layoutY="41.0" prefHeight="25.0" prefWidth="341.0" promptText="Nome" />
+      <JFXTextField fx:id="txtEndereco" focusColor="#40a84d" layoutX="14.0" layoutY="78.0" prefHeight="25.0" prefWidth="341.0" promptText="Endereço" />
+      <JFXTextField fx:id="txtBairro" focusColor="#40a84d" layoutX="16.0" layoutY="115.0" prefHeight="25.0" prefWidth="341.0" promptText="Bairro" />
+      <JFXTextField fx:id="txtCidade" focusColor="#40a84d" layoutX="18.0" layoutY="152.0" prefHeight="25.0" prefWidth="341.0" promptText="Cidade" />
+      <JFXTextField fx:id="txtCep" focusColor="#40a84d" layoutX="19.0" layoutY="189.0" prefHeight="25.0" prefWidth="154.0" promptText="CEP" />
+      <JFXTextField fx:id="txtEstado" focusColor="#40a84d" layoutX="204.0" layoutY="189.0" prefHeight="25.0" prefWidth="154.0" promptText="Estado" />
+      <JFXTextField fx:id="txtTelefone" focusColor="#40a84d" layoutX="20.0" layoutY="226.0" prefHeight="25.0" prefWidth="154.0" promptText="Telefone" />
+      <JFXTextField fx:id="txtCelular" focusColor="#40a84d" layoutX="21.0" layoutY="263.0" prefHeight="25.0" prefWidth="154.0" promptText="Celular" />
+      <JFXTextField fx:id="txtPeso" focusColor="#40a84d" labelFloat="true" layoutX="22.0" layoutY="369.0" prefHeight="25.0" prefWidth="136.0" promptText="Peso" />
+      <JFXTextField fx:id="txtIdade" focusColor="#40a84d" labelFloat="true" layoutX="24.0" layoutY="411.0" prefHeight="25.0" prefWidth="136.0" promptText="Idade" />
+      <JFXTextField fx:id="txtAltura" focusColor="#40a84d" labelFloat="true" layoutX="190.0" layoutY="369.0" prefHeight="25.0" prefWidth="136.0" promptText="Altura" />
+      <JFXRadioButton fx:id="rdMasculino" layoutX="235.0" layoutY="415.0" selected="true" text="M">
+         <toggleGroup>
+            <ToggleGroup fx:id="gpSexo" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="rdFemino" layoutX="292.0" layoutY="415.0" text="F" toggleGroup="$gpSexo" />
+   </children>
+</AnchorPane>
