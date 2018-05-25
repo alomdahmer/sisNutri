@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXTextField;
 import br.edu.unisep.fx.annotation.OnlyNumber;
 import br.edu.unisep.fx.annotation.Required;
 import br.edu.unisep.fx.controller.ModalController;
+import br.edu.unisep.fx.message.AlertUtils;
 import br.edu.unisep.model.dao.PacienteDAO;
 import br.edu.unisep.model.vo.PacienteVO;
 import javafx.fxml.FXML;
@@ -39,7 +40,7 @@ public class NovoPacienteController extends ModalController{
 	@Required(campo = "Celular")
 	@FXML private JFXTextField txtCelular;
 
-	@OnlyNumber(isDecimal=true, decimalCount=2)
+	@OnlyNumber(isDecimal=true,decimalCount=2)
 	@Required(campo = "Peso")
 	@FXML private JFXTextField txtPeso;
 
@@ -61,9 +62,8 @@ public class NovoPacienteController extends ModalController{
 	}
 
 	public void salvar() {
-
+		if (validate()) {
 		PacienteVO paciente = new PacienteVO();
-
 		paciente.setNome(txtNome.getText());
 		paciente.setEndereco(txtEndereco.getText());
 		paciente.setBairro(txtBairro.getText());
@@ -72,22 +72,19 @@ public class NovoPacienteController extends ModalController{
 		paciente.setEstado(txtEstado.getText());
 		paciente.setTelefone(txtTelefone.getText());
 		paciente.setCeleular(txtCelular.getText());
-
 		paciente.setPeso(Double.parseDouble(txtPeso.getText()));
 		paciente.setAltura(Double.parseDouble(txtAltura.getText()));
 		paciente.setIdade(Integer.parseInt(txtIdade.getText()));
-
 		if (rdMasculino.isSelected()) {
 			paciente.setSexo("m");
 		} else {
 			paciente.setSexo("f");
 		}
-
 		PacienteDAO dao = new PacienteDAO();
 		dao.salvar(paciente);
-
+		AlertUtils.exibirInfo("Paciente cadastrado com sucesso!!");
 		closeModal();
-
+		}
 	}
 
 	public void limparCampo() {

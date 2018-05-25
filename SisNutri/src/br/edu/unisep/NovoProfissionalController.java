@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXTextField;
 import br.edu.unisep.fx.annotation.OnlyNumber;
 import br.edu.unisep.fx.annotation.Required;
 import br.edu.unisep.fx.controller.ModalController;
+import br.edu.unisep.fx.message.AlertUtils;
 import br.edu.unisep.model.dao.NutricionistaDAO;
 import br.edu.unisep.model.vo.NutricionistaVO;
 import javafx.fxml.FXML;
@@ -46,10 +47,9 @@ public class NovoProfissionalController extends ModalController{
 
 	}
 
-	public void salvar(){
-
+	public void salvar() {
+		if (validate()) {
 		NutricionistaVO nutricionista = new NutricionistaVO();
-
 		nutricionista.setNome(txtNome.getText());
 		nutricionista.setEndereco(txtEndereco.getText());
 		nutricionista.setBairro(txtBairro.getText());
@@ -59,12 +59,11 @@ public class NovoProfissionalController extends ModalController{
 		nutricionista.setTelefone(txtTelefone.getText());
 		nutricionista.setCfn(txtCfn.getText());
 		nutricionista.setCelular(txtCelular.getText());
-
 		NutricionistaDAO dao = new NutricionistaDAO();
-
 		dao.salvar(nutricionista);
-
+		AlertUtils.exibirInfo("Paciente cadastrado com sucesso!!");
 		closeModal();
+		}
 	}
 
 	public void limparCampo(){
@@ -77,7 +76,6 @@ public class NovoProfissionalController extends ModalController{
 		txtCelular.clear();
 		txtTelefone.clear();
 		txtCfn.clear();
-
 		txtNome.requestFocus();
 	}
 
