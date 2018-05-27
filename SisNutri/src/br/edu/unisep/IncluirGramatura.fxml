@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="103.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.unisep.IncluirGramaturaController">
+   <children>
+      <JFXTextField alignment="CENTER" layoutX="154.0" layoutY="53.0" text="(em g)" />
+      <HBox alignment="CENTER" layoutY="80.0" prefHeight="52.0" prefWidth="443.0" spacing="30.0">
+         <children>
+            <JFXButton defaultButton="true" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #154710;" text="OK" textFill="WHITE" />
+            <JFXButton defaultButton="true" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #154710;" text="Cancelar" textFill="WHITE" />
+         </children>
+      </HBox>
+      <Label layoutX="157.0" layoutY="24.0" text="Quantidade do alimento" />
+   </children>
+</AnchorPane>

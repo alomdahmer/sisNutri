@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 
 public class Main extends Application {
@@ -18,6 +19,8 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			//primaryStage.getIcons().add(imageAplication);
 			primaryStage.setResizable(false);
+			primaryStage.centerOnScreen();
+			primaryStage.initStyle(StageStyle.UNDECORATED);
 			primaryStage.setTitle("SisNutri");
 			primaryStage.show();
 		} catch(Exception e) {

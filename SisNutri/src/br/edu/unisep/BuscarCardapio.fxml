@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="434.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.unisep.BuscarCardapioController">
+   <children>
+      <JFXComboBox fx:id="cmbPaciente" focusColor="#40a84d" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="215.0" promptText="Paciente" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <TableView fx:id="tbCardapio" layoutX="10.0" layoutY="52.0" prefHeight="326.0" prefWidth="638.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <columns>
+          <TableColumn fx:id="colNomeCardapio" prefWidth="246.0" text="Nome do cardápio" />
+          <TableColumn fx:id="colNomePaciente" prefWidth="261.0" text="Paciente" />
+            <TableColumn fx:id="colData" prefWidth="133.0" text="Data" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="154.0" layoutY="393.0" prefHeight="25.0" prefWidth="387.0" spacing="20.0">
+         <children>
+            <JFXButton defaultButton="true" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #154710;" text="Buscar" textFill="WHITE" />
+            <JFXButton cancelButton="true" onAction="#limpar" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #154710;" text="Limpar" textFill="WHITE" />
+            <JFXButton cancelButton="true" onAction="#cancelar" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #154710;" text="Cancelar" textFill="WHITE" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

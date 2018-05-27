@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="361.0" prefWidth="571.0" style="-fx-background-color: #154710;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.unisep.SisNutriController">
    <children>
-      <Label layoutX="27.0" layoutY="75.0" text="Escolha uma opção:" textFill="WHITE">
+      <Label layoutX="27.0" layoutY="63.0" text="Escolha uma opção:" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
@@ -25,11 +25,16 @@
          <children>
             <JFXButton onAction="#cadastrarPaciente" prefHeight="25.0" prefWidth="151.0" ripplerFill="WHITE" style="-fx-background-color: #58843f;" text="Cadastrar Paciente" textFill="WHITE" />
             <JFXButton onAction="#cadastrarProfissional" prefHeight="25.0" prefWidth="151.0" ripplerFill="WHITE" style="-fx-background-color: #58843f;" text="Cadastrar Profissional" textFill="WHITE" />
-            <JFXButton prefHeight="25.0" prefWidth="151.0" ripplerFill="WHITE" style="-fx-background-color: #58843f;" text="Construir Cardapio" textFill="WHITE" />
-            <JFXButton prefHeight="25.0" prefWidth="151.0" ripplerFill="WHITE" style="-fx-background-color: #58843f;" text="Buscar Cardapio" textFill="WHITE" />
+            <JFXButton onAction="#construirCardapio" prefHeight="25.0" prefWidth="151.0" ripplerFill="WHITE" style="-fx-background-color: #58843f;" text="Construir Cardapio" textFill="WHITE" />
+            <JFXButton onAction="#buscarCardapio" prefHeight="25.0" prefWidth="151.0" ripplerFill="WHITE" style="-fx-background-color: #58843f;" text="Buscar Cardapio" textFill="WHITE" />
          </children>
       </VBox>
-      <JFXButton fx:id="btnFechar" layoutX="-1.0" layoutY="-1.0" onAction="#fecharJanela" prefHeight="17.0" prefWidth="14.0" text="X" textFill="#58843f">
+      <JFXButton fx:id="btnFechar" layoutX="14.0" onAction="#fecharJanela" prefHeight="17.0" prefWidth="14.0" text="X" textFill="#58843f">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnFechar1" layoutX="-1.0" layoutY="-3.0" onAction="#fecharJanela" prefHeight="17.0" prefWidth="14.0" text="_" textFill="#58843f">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

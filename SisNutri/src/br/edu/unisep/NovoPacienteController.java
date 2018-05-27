@@ -100,11 +100,8 @@ public class NovoPacienteController extends ModalController{
 		txtPeso.clear();
 		txtAltura.clear();
 		txtIdade.clear();
-
 		rdMasculino.setSelected(true);
-
 		txtNome.requestFocus();
-
 	}
 
 	public void cancelar() {

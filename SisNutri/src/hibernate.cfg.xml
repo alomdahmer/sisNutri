@@ -13,7 +13,8 @@
 		<property name="hibernate.format_sql">true</property>
 
 		<mapping class="br.edu.unisep.model.vo.NutricionistaVO" />
-		<mapping class="br.edu.unisep.model.vo.PacienteVO" />
+		<mapping class="br.edu.unisep.model.vo.PacienteVO"/>
+		<mapping class="br.edu.unisep.model.vo.AlimentoVO"/>
 
 	</session-factory>
 </hibernate-configuration>

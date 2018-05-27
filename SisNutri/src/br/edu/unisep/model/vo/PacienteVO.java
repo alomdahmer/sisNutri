@@ -13,31 +13,31 @@ public class PacienteVO {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name = "id_pacientes")
+	@Column(name="id_paciente")
 	private Integer id;
 
-	@Column(name = "nome_paciente")
+	@Column(name="nome_paciente")
 	private String nome;
 
-	@Column(name = "endereco_paciente")
+	@Column(name="endereco_paciente")
 	private String endereco;
 
-	@Column(name = "bairro_paciente")
+	@Column(name="bairro_paciente")
 	private String bairro;
 
-	@Column(name = "cep_paciente")
+	@Column(name="cep_paciente")
 	private String cep;
 
-	@Column(name = "cidade_paciente")
+	@Column(name="cidade_paciente")
 	private String cidade;
 
-	@Column(name = "estado_paciente")
+	@Column(name="estado_paciente")
 	private String estado;
 
-	@Column(name = "telefone_paciente")
+	@Column(name="telefone_paciente")
 	private String telefone;
 
-	@Column(name = "celular_paciente")
+	@Column(name="celular_paciente")
 	private String celeular;
 
 	@Column(name = "peso")
@@ -54,7 +54,7 @@ public class PacienteVO {
 
 	@Override
 	public String toString() {
-		return nome;
+		return this.nome;
 	}
 
 	public Integer getId() {
@@ -160,6 +160,5 @@ public class PacienteVO {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-
-
+	
 }
