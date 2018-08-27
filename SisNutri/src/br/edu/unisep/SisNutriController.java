@@ -11,33 +11,33 @@ public class SisNutriController extends AppController{
 
 	@FXML private Button btnFechar;
 	Stage stage;
-	
+
 	@Override
 	protected void onInit() {
-		
+
 	}
 
 	public void cadastrarPaciente(){
-		openModal("NovoPaciente.fxml",null);
+		openModal("NovoPaciente.fxml");
 	}
 
 	public void cadastrarProfissional(){
-		openModal("NovoProfissional.fxml",null);
+		openModal("NovoProfissional.fxml");
 	}
-	
+
 	public void construirCardapio() {
-		openModal("ConstruirCardapio.fxml", null);
+		openModal("ConstruirCardapio.fxml");
 	}
-	
+
 	public void buscarCardapio() {
-		openModal("BuscarCardapio.fxml", null);
+		openModal("BuscarCardapio.fxml");
 	}
-	
+
 	public void fecharJanela() {
 		stage = (Stage) btnFechar.getScene().getWindow();
 		stage.close();
 	}
-	
+
 	public void minimizarJanela() {
 		stage.setIconified(true);
 	}
